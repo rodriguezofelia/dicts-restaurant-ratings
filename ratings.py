@@ -1,6 +1,7 @@
 """Restaurant rating lister."""
 
 def add_ratings():
+    """ Reads file and retuns dictionary with resturant names and ratings """
 
     restaurants = open("scores.txt")
 
@@ -16,6 +17,7 @@ def add_ratings():
     return restaurant_ratings
 
 def add_restaurant(restaurant_ratings):
+    """ Adds a restaurant and rating to existing restaurants and ratings """
 
     print("Add a rating for a restaurant!")
     restaurant_name = input("Restaurant name > ").title()
@@ -25,6 +27,7 @@ def add_restaurant(restaurant_ratings):
 
 
 def sorted_scores(restaurant_ratings):
+    """ Prints all restaurants and ratings sorted in alphabetical order """
 
     sorted_restaurant = sorted(restaurant_ratings)
 
@@ -37,7 +40,8 @@ def sorted_scores(restaurant_ratings):
 # will process existing restaurants and ratings from file
 restaurant_ratings = add_ratings()
 
-# 
+# prompts user to add a restaurant and rating
 add_restaurant(restaurant_ratings)
 
+#prints all rated restaurants and ratings in alaphabetical order
 sorted_scores(restaurant_ratings)
